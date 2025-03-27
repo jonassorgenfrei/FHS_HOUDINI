@@ -1,0 +1,9 @@
+{
+    "env": [
+        {
+            "FHS_HOUDINI": "D:/Documents/Houdini/FHS_HOUDINI"
+        }
+    ],
+    "path": "${FHS_HOUDINI}",
+    "version": "1.0"
+}
