@@ -17,3 +17,16 @@ def callFunction50():
             myFunction(i)
         
         hou.node("/obj").layoutChildren()
+        
+def promptMessage(kwargs):
+    print(kwargs)
+    
+    collectNodes = []    
+    
+    for parm in kwargs["parms"]:
+        currentNode = parm.node()
+        currentNode.parm("scale").set(5)
+        collectNodes.append(currentNode)
+        
+    path_str = ",".join([currentNode.path() for currentNode in collectNodes])
+    hou.ui.displayMessage(f"HelloWorld Clicked on: {path_str}")   
