@@ -5,5 +5,12 @@
  Note, that two definitions of the same element are not allowed in
  a single file. -->
 
-  <toolshelf name="fhs_shelf" label="FHS Shelf"/>
+  <toolshelf name="fhs_shelf" label="FHS Shelf">
+    <memberTool name="myNodeCreator"/>
+  </toolshelf>
+
+  <tool name="myNodeCreator" label="My Node Creator" icon="PLASMA_App">
+    <script scriptType="python"><![CDATA[import fhsmodul
+fhsmodul.callFunction50()]]></script>
+  </tool>
 </shelfDocument>
